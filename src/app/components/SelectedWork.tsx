@@ -2,6 +2,9 @@ import { ArrowUpRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
+/** Set to `true` when you want "01 /" before PORTFOLIO again. */
+const SHOW_PORTFOLIO_EYEBROW_NUMBER = false;
+
 export function SelectedWork() {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
@@ -14,7 +17,7 @@ export function SelectedWork() {
       domain: 'EdTech',
       category: 'EdTech | Product I',
       description: 'OneLern is a cross-platform digital learning ecosystem serving schools across India and Caribbean markets, with Teacher and Student applications available on mobile, web, and tablet. The platform also includes a web portal for school leadership (principals and administrators) and multiple internal applications supporting sales, school success specialists, authors, production teams, and administrative teams, enabling content creation, classroom delivery, school operations, and institutional management through a unified, role-based system built for scale.',
-      image: placeholderImage,
+      image: '/onelern-featured-work.png',
       websiteUrl: 'https://www.onelern.com/',
       caseStudyUrl: '/case-study/onelern-assessments',
       isConfidential: true,
@@ -24,7 +27,7 @@ export function SelectedWork() {
       domain: 'Cybersecurity',
       category: 'Cybersecurity | Product I',
       description: 'AI-powered integrated cybersecurity platform with XDR, SIEM, SOAR, which helps MSPs and MSSPs to onboard their customers, manage all their endpoints, identify threats, and mitigate them by automated playbooks.',
-      image: placeholderImage,
+      image: '/cysec-featured-work.png',
       websiteUrl: 'https://www.fortunacysec.com/platform',
       isConfidential: true,
     },
@@ -36,8 +39,9 @@ export function SelectedWork() {
       image: placeholderImage,
       websiteUrl: 'https://fortunaclouds.com/',
       isConfidential: false,
+      hidden: true,
     },
-  ];
+  ].filter((project) => !('hidden' in project && project.hidden));
 
   return (
     <section 
@@ -50,7 +54,9 @@ export function SelectedWork() {
       <div className="max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="mx-[0px] mt-[0px] mb-[48px]">
-          <div className="text-xs font-bold text-black/30 tracking-widest mb-8">01 / PORTFOLIO</div>
+          <div className="text-xs font-bold text-black/30 tracking-widest mb-8">
+            {SHOW_PORTFOLIO_EYEBROW_NUMBER ? '01 / PORTFOLIO' : 'PORTFOLIO'}
+          </div>
           <h2 className="heading-font text-4xl lg:text-5xl font-bold text-black leading-none tracking-tight mb-8 font-['Work_Sans']">FEATURED WORK</h2>
           <div className="w-24 h-1 bg-[#FF6B35]"></div>
         </div>

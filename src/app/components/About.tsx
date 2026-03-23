@@ -16,7 +16,11 @@ import {
 } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-export function About() {
+type AboutProps = {
+  sectionEyebrow?: string;
+};
+
+export function About({ sectionEyebrow = '03 / ABOUT' }: AboutProps) {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   const domains = [
@@ -123,7 +127,7 @@ export function About() {
       <div className="max-w-[1400px] mx-auto">
         {/* Main Section Header */}
         <div className="mb-20">
-          <div className="text-xs font-bold text-black/30 tracking-widest mb-8">03 / ABOUT</div>
+          <div className="text-xs font-bold text-black/30 tracking-widest mb-8">{sectionEyebrow}</div>
           <h2 className="heading-font text-4xl lg:text-5xl font-bold text-black leading-none tracking-tight mb-8 font-['Work_Sans']">
             ABOUT ME
           </h2>

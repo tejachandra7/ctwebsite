@@ -56,7 +56,7 @@ export function Contact() {
       
       <div className="max-w-[1400px] mx-auto relative z-10">
         {/* Section Number */}
-        <div className="text-xs font-bold text-white/30 tracking-widest mb-16">05 / CONTACT</div>
+        <div className="text-xs font-bold text-white/30 tracking-widest mb-16">02 / CONTACT</div>
 
         <div className="grid lg:grid-cols-12 gap-20">
           {/* Left - Large CTA */}

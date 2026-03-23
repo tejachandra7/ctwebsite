@@ -1,93 +1,11 @@
-import { Download, ArrowDown, ChevronDown, Eye } from "lucide-react";
+import { Eye } from "lucide-react";
 import { Button } from "./ui/button";
-import { useState, useEffect } from "react";
+import { SiteNav } from "./SiteNav";
 
 export function Hero() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToWork = () => {
-    document
-      .getElementById("work")
-      ?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <section className="bg-white relative overflow-hidden py-12 md:py-16 px-6 md:px-12">
-      {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300 px-6 md:px-12 ${
-        isScrolled ? "shadow-md" : ""
-      }`}>
-        <div className="max-w-[1400px] mx-auto py-6 flex justify-between items-center relative">
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
-          >
-            <div className="w-10 h-10 bg-black flex items-center justify-center rounded-lg">
-              <span className="text-sm font-bold text-white">
-                CT
-              </span>
-            </div>
-          </button>
-
-          {/* Navigation Links - Centered */}
-          <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-            <a
-              href="#work"
-              className="font-bold text-black/60 hover:text-black tracking-wider uppercase transition-colors text-[13px]"
-            >
-              Work
-            </a>
-            <a
-              href="#ai-workflow"
-              className="font-bold text-black/60 hover:text-black tracking-wider uppercase transition-colors text-[13px]"
-            >
-              AI Integration
-            </a>
-            <a
-              href="#about"
-              className="text-xs font-bold text-black/60 hover:text-black tracking-wider uppercase transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#skills"
-              className="text-xs font-bold text-black/60 hover:text-black tracking-wider uppercase transition-colors"
-            >
-              Capabilities
-            </a>
-          </div>
-
-          <div className="flex items-center gap-6">
-            <a
-              href="https://drive.google.com/file/d/1IzwB15tZ6ifleu91ckA67inLejH-Sfe3/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden lg:block text-xs font-bold text-black/60 hover:text-black tracking-wider uppercase transition-colors"
-            >
-              Resume
-            </a>
-            <a href="#contact" className="cursor-pointer">
-              <Button
-                size="sm"
-                className="bg-black text-white hover:bg-black/90 rounded-full px-8 h-11 font-bold tracking-wider cursor-pointer"
-              >CONTACT ME</Button>
-            </a>
-          </div>
-        </div>
-      </nav>
+      <SiteNav />
 
       <div className="pt-24 relative z-10">
         <div className="max-w-[1400px] mx-auto">
