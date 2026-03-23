@@ -38,7 +38,7 @@ export function Hero() {
 
                 {/* Single Line Description */}
                 <div className="pt-2 max-w-full lg:max-w-[60%]">
-                  <p className="text-black/70 leading-relaxed px-[0px] pt-[8px] pb-[0px] text-[18px] min-w-[70%]">A Product Design Manager driven by a builder mindset, shaping digital products across EdTech, Cybersecurity, Test Automation, and RPA — leading teams while staying hands-on with complex design challenges and actively utilizing AI to push design efficiency and pace.</p>
+                  <p className="text-black/70 leading-relaxed px-[0px] pt-[8px] pb-[0px] text-[18px] min-w-[70%]">A Product Design Leader driven by a builder mindset, shaping digital products across EdTech, Cybersecurity, Test Automation, and RPA — leading teams while staying hands-on with complex design challenges and actively utilizing AI to push design efficiency and pace.</p>
                 </div>
               </div>
 
