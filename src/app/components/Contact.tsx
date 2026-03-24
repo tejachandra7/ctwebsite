@@ -76,7 +76,7 @@ export function Contact() {
               
               <div className="w-32 h-1 bg-[#FF6B35]"></div>
               
-              <p className="text-2xl text-white/70 leading-relaxed max-w-lg">Actively exploring senior and leadership product design roles.</p>
+              <p className="text-2xl text-white/70 leading-relaxed max-w-lg">Actively exploring UX/Product Design roles.</p>
             </div>
 
             {/* Location Info */}

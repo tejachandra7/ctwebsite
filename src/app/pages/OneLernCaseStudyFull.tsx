@@ -189,7 +189,7 @@ export default function OneLernCaseStudyFull() {
         {/* 01 TL;DR */}
         <AnimatedSection>
           <SectionLabel number="01" label="Executive Summary" />
-          <SectionHeading>TL;DR</SectionHeading>
+          <SectionHeading>Summary</SectionHeading>
           <CalloutBox label="The Short Version" variant="light">
             <div className="space-y-4 text-black/70 font-normal text-base">
               <p>

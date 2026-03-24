@@ -20,6 +20,7 @@ export function SelectedWork() {
       image: '/onelern-featured-work.png',
       websiteUrl: 'https://www.onelern.com/',
       caseStudyUrl: '/case-study/onelern-assessments',
+      hideCaseStudy: true,
       isConfidential: true,
     },
     {
@@ -105,7 +106,7 @@ export function SelectedWork() {
 
                 {/* Action Links */}
                 <div className="flex flex-wrap gap-4 pt-2">
-                  {project.caseStudyUrl && (
+                  {project.caseStudyUrl && !('hideCaseStudy' in project && project.hideCaseStudy) && (
                     <a
                       href={project.caseStudyUrl}
                       className="inline-flex items-center gap-2 bg-black text-white hover:bg-black/90 px-6 py-3 rounded-full text-sm font-bold tracking-wider transition-colors group/btn"
