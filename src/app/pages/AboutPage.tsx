@@ -1,5 +1,6 @@
 import { About } from "../components/About";
 import { SkillsTools } from "../components/SkillsTools";
+import { Contact } from "../components/Contact";
 import { SiteNav } from "../components/SiteNav";
 
 export default function AboutPage() {
@@ -9,6 +10,7 @@ export default function AboutPage() {
       <div className="pt-24">
         <About sectionEyebrow="01 / ABOUT" />
         <SkillsTools sectionEyebrow="02 / CAPABILITIES" />
+        <Contact />
       </div>
     </div>
   );
